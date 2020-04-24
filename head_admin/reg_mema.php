@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.12.2, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.2, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="Website Builder Description">
+  
+  <title>advert</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section once="footers" class="cid-rS4Ziroi60" id="footer6-h">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2019 Mobirise - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/o">portfolio web templates</a></section><section class="menu cid-rS4Zishq4p" once="menu" id="menu2-i">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="https://mobirise.co"><span class="socicon socicon-houzz mbr-iconfont mbr-iconfont-btn"></span></a><a class="navbar-caption text-black display-4" href="https://mobirise.co" style="background-color: rgb(255, 255, 255); display: inline !important;">CG CONTROL PANEL</a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-black display-4" href="https://mobirise.co">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+                </li></ul>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="page2.php"><span class="mbri-users mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Users Post</a><a class="btn btn-sm btn-primary display-4" href="complain.php"><span class="mbri-more-vertical mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Complain</a> <a class="btn btn-sm btn-primary display-4" href="page3.php"><span class="mbri-more-vertical mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Advert</a> <a class="btn btn-sm btn-primary display-4" href="page4.php"><span class="mbri-bookmark mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Latest</a> <a class="btn btn-sm btn-primary display-4" href="page5.html"><span class="mbri-setting3 mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Settings</a> <a class="btn btn-sm btn-primary display-4" href="index.php"><span class="mbri-logout mbr-iconfont mbr-iconfont-btn" style="font-size: 20px;"></span>Logout</a></div>
+        </div>
+    </nav>
+</section>
+
+<section class="mbr-section info2 cid-rS4ZitZ2b2" id="info2-j">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row main justify-content-center">
+            <div class="media-container-column col-12 col-lg-3 col-md-4">
+                <div class="mbr-section-btn align-left py-4"><a class="btn btn-primary display-4" href="reg_mem.php"><span class="mbri-left mbr-iconfont mbr-iconfont-btn"></span>
+                    BACK</a></div>
+            </div>
+            <div class="media-container-column title col-12 col-lg-7 col-md-6">
+                <h2 class="align-right mbr-bold mbr-white pb-3 mbr-fonts-style display-2">REGISTERED ADMIN</h2>
+                <h3 class="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5">
+                    View all members.
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class='mbr-section article content12 cid-rRVitkZuGU' id='content12-m'>
+     
+    <div class="container">
+        
+        <form action="reg_mema.php" method="POST">
+        <?php
+mysql_connect("localhost","root","");
+mysql_select_db('church_project');
+if(isset($_GET['edit'])){
+$id=$_GET['edit'];
+$sql=mysql_query("SELECT * FROM administrator WHERE id='$id'");
+$row=mysql_fetch_array($sql);
+}
+if(isset($_POST['update'])){
+$name_of_church=$_POST['name_of_church'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$country=$_POST['country'];
+$state=$_POST['state'];
+$address=$_POST['address'];
+$pass=$_POST['pass'];
+$pass2=$_POST['pass2'];
+$id=$_POST['id'];
+if($pass==$pass2){
+$sql="UPDATE administrator SET name_of_church='$name_of_church', email='$email',phone='$phone',country='$country',state='$state',address='$address',pass='$pass',pass2='$pass2' WHERE id='$id'";
+$res=mysql_query($sql) or die("could not update".mysql_error());
+echo"<script>alert('Record was updated successfully!');</script>";
+echo"<meta http-equiv='refresh' content='0;url=reg_mem.php'>";
+}else{
+    echo"<script>alert('Passwords do not match');</script>";
+}
+}
+?>
+<br>
+<input type="hidden" name="id" value="<?php echo $row[0]; ?>" />
+<td></td>Name of Church<td><input type="text" name="name_of_church" value="<?php echo $row[1];?>" class="form-control"></td>
+<td></td>Email<td><input type="text" name="email" value="<?php echo $row[2];?>" class="form-control"></td>
+<td></td>Mobile Number<td><input type="text" name="phone" value="<?php echo $row[3];?>" class="form-control"></td>
+<td></td>Country<td><input type="text" name="country" value="<?php echo $row[4];?>"class="form-control"></td>
+<td></td>State<td><input type="text" name="state"value="<?php echo $row[5];?>" class="form-control"></td>
+<td></td>Address<td><input type="text" name="address"value="<?php echo $row[6];?>" class="form-control"></td>
+<td></td>Password<td><input type="text" name="pass"value="<?php echo $row[7];?>" class="form-control"></td>
+<td></td>Password2<td><input type="text" name="pass2"value="<?php echo $row[8];?>" class="form-control"></td>
+<td><input type="submit" value="submit" name="update" style="padding:5px;width:100px; color:dodgerblue;" class="form-control"></td>
+               
+</form>
+        </div>
+</section>
+
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/nav-dropdown.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/formoid/formoid.min.js"></script>
+  
+  
+</body>
+</html>
